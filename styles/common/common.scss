@@ -1,0 +1,373 @@
+
+
+$black: #000000;
+$white: #FFFFFF;
+$accent: #F0145A;
+
+$main: #323264;
+$main-alt: #46466E;
+$main-soft: #686887;
+
+$blue-regular: #24A3FF;
+$blue-hover: #0085FF;
+$blue-focus: #006CCF;
+
+$grey-bg: #F5F5FA;
+$grey-bg-alt: #EDEDF7;
+$grey-text: #B3B3BA;
+$grey-separator: #E6E6F0;
+
+$gradient: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$gradient-red: linear-gradient(121.42deg, #F0145A 30.65%, #693264 107.33%);
+$gradient-supersoft: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$gradient-red-text: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+
+
+
+body{
+    font-family: 'TT Norms', sans-serif;
+    font-size: 18px;
+    line-height: 1.44;
+    color: #000000;
+}
+
+
+p{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 32px;
+    line-height: 38px;
+}
+
+h2{
+    font-size: 22px;
+    line-height: 26px;
+}
+
+h3{
+    font-size: 18px;
+    line-height: 21px;
+}
+
+h3.caps{
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h4{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.link{
+    font-size: 16px;
+    line-height: 20px;
+    color: $blue-regular;
+    transition: all 0.3s;
+
+    &:hover{
+        color: $accent;
+    }
+}
+
+.btn{
+    background: $blue-regular;
+    color: $white;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    padding: 16px 24px 17px;
+    transition: all 0.3s;
+    &:hover{
+        background: $blue-hover;
+        box-shadow: 0 0 30px rgba(36, 163, 255, 0.5);
+    }
+    &:focus, &:active{
+        background: $blue-focus;
+    }
+}
+
+
+
+.container{
+    max-width: 1440px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.logo{
+    color: $white;
+    &.main{
+        color: $main;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+.lang-buttons{
+    align-items: center;
+    gap: 4px;
+    button{
+        border-radius: 8px;
+        padding: 5px 6px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: $white;
+        background: transparent;
+        &.active{
+            background: $accent;
+        }
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    list-style: none;
+    bottom: -36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 14px;
+
+    button, li {
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        background: transparent;
+    }
+
+    button:before {
+        display: block;
+        content: '';
+        opacity: 0.2;
+        background: $blue-regular;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+    li.slick-active button:before{
+        opacity: 1;
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px){
+    .container{
+        width: 1440px;
+        padding: 0 60px;
+        margin: 0 auto;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    h2{
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    h3{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+
+    .display{
+        nav{display: none}
+    }
+
+    .anchor{
+        display: none;
+    }
+
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: $white;
+        margin-top: 13px;
+        padding-right: 25px;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        height: 100vh;
+        background: #FFFFFF
+    }
+
+    .menu > li {
+        margin: 0 1rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #F5F5FA;;
+    }
+
+    .top-nav .menu #li-pic {
+        background: none;
+        border: none;
+        position: fixed;
+        top: 60px;
+    }
+
+    .top-nav .menu .li-pic img {
+        width: 32px;
+        height: 32px
+    }
+
+    .menu-button-container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 2px;
+        width: 21px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+    }
+
+    .menu-button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .menu-button::after {
+        content: '';
+        margin-top: 8px;
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+        background-color: black;
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked + .menu-button-container {
+        position: fixed;
+        right: 23px;
+
+        z-index: 10
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::after {
+        margin-top: 0;
+        transform: rotate(-405deg);
+        background-color: black;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        position: relative;;
+        top: -17%;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid white;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+
+@media (min-width: 1024px){
+
+
+
+}
+
+
+
+
+
+
+
+
